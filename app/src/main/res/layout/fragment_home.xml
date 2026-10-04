@@ -1,5 +1,318 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brand_black" />
+    android:background="@color/brand_black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <ProgressBar
+            android:id="@+id/progress_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/brand_gold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_error_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:gravity="center"
+            android:textColor="@color/status_progress_text"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Failed to load portfolio" />
+
+        <LinearLayout
+            android:id="@+id/layout_content_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Profile Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/avatar_size_home"
+                    android:layout_height="@dimen/avatar_size_home"
+                    android:background="@color/brand_surface_variant"
+                    android:contentDescription="@string/author_name"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Small"
+                    app:strokeColor="@color/brand_gold"
+                    app:strokeWidth="@dimen/avatar_border" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/author_name"
+                        android:textColor="@color/brand_text_primary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/author_title"
+                        android:textColor="@color/brand_gold"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_handle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/author_handle"
+                        android:textColor="@color/brand_text_muted"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Bio -->
+            <TextView
+                android:id="@+id/tv_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/author_bio"
+                android:textColor="@color/brand_text_secondary"
+                android:textSize="12sp" />
+
+            <!-- Action Buttons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_resume"
+                    style="@style/Widget.Kirin.Button.Gold"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:text="@string/action_resume"
+                    android:textSize="11sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_email"
+                    style="@style/Widget.Kirin.Button.Outline"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:text="@string/action_email"
+                    android:textSize="11sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_github"
+                    style="@style/Widget.Kirin.Button.Outline"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    android:text="@string/action_github"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- Metrics / Stats Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Kirin.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_stat_projects"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stat_projects_count"
+                            android:textColor="@color/brand_gold"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/stat_projects_label"
+                            android:textColor="@color/brand_text_muted"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Kirin.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_stat_articles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stat_articles_count"
+                            android:textColor="@color/status_live_text"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/stat_articles_label"
+                            android:textColor="@color/brand_text_muted"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Kirin.Card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_stat_skills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stat_skills_count"
+                            android:textColor="#93C5FD"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/stat_skills_label"
+                            android:textColor="@color/brand_text_muted"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Featured Systems Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:letterSpacing="0.05"
+                    android:text="@string/section_featured"
+                    android:textColor="@color/brand_text_primary"
+                    android:textSize="13.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_view_all_projects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/action_view_all"
+                    android:textColor="@color/brand_gold"
+                    android:textSize="11.5sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Featured Systems Carousel -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_featured_projects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_featured_project" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
