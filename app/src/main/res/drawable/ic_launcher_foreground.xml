@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Geometric K emblem in brand gold -->
+    <path
+        android:fillColor="@color/brand_gold"
+        android:pathData="M34,30 h8 v48 h-8 z M46,54 l18,-24 h10 l-18,24 l20,24 h-10 z" />
+</vector>
