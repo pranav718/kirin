@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kirin</string>
+    <string name="app_brand">kirin</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_projects">Projects</string>
+    <string name="nav_blog">Blog</string>
+    <string name="nav_about">About</string>
+
+    <!-- Profile Header -->
+    <string name="author_name">Pranav Ray</string>
+    <string name="author_title">Systems &amp; Distributed Backend</string>
+    <string name="author_handle">portfolio.knightkun.codes</string>
+    <string name="author_bio">building concurrent architectures, peer-to-peer networks, and zero-dependency low-level engines in Go.</string>
+    <string name="author_about_full">basically, i just like building backend systems. a lot. nowadays i\'m designing concurrent architectures thus diving deep into peer-to-peer networks and distributed systems. in my free time, i like to write blogs, read, solve algorithms and pretend to be good at chess.</string>
+    <string name="quote_vagabond">"inside, i\'m infinite"</string>
+
+    <!-- Actions -->
+    <string name="action_resume">Resume PDF</string>
+    <string name="action_email">Direct Email</string>
+    <string name="action_github">GitHub</string>
+    <string name="action_view_all">View All (11)</string>
+    <string name="action_view_code">View Code on GitHub</string>
+    <string name="action_open_demo">Open Live Demo</string>
+    <string name="action_share">Share</string>
+
+    <!-- Stats -->
+    <string name="stat_projects_count">11</string>
+    <string name="stat_projects_label">PROJECTS</string>
+    <string name="stat_articles_count">3</string>
+    <string name="stat_articles_label">ARTICLES</string>
+    <string name="stat_skills_count">29</string>
+    <string name="stat_skills_label">SKILLS</string>
+
+    <!-- Sections -->
+    <string name="section_featured">Featured Systems</string>
+    <string name="section_projects_title">Projects Catalog</string>
+    <string name="section_projects_subtitle">11 Repos</string>
+    <string name="section_blog_title">Engineering Blog</string>
+    <string name="section_blog_subtitle">Medium Feed</string>
+    <string name="section_about_title">Developer Profile</string>
+    <string name="section_architecture_overview">Architecture Overview</string>
+    <string name="section_tech_stack">Technology Stack</string>
+    <string name="section_languages">Languages</string>
+    <string name="section_backend">Backend &amp; Distributed</string>
+    <string name="section_databases">Databases &amp; Caching</string>
+    <string name="section_frontend">Frontend &amp; Graphics</string>
+    <string name="section_tools">Tools &amp; DevOps</string>
+    <string name="section_platforms">Developer Platforms</string>
+
+    <!-- Filter Chips -->
+    <string name="filter_all">All (11)</string>
+    <string name="filter_live">Live Deployments (9)</string>
+    <string name="filter_progress">In Progress (2)</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search projects, Go, WebSockets, Three.js...</string>
+    <string name="search_empty">No matching projects found</string>
+
+    <!-- Status -->
+    <string name="status_live">LIVE</string>
+    <string name="status_progress">IN PROGRESS</string>
+</resources>
