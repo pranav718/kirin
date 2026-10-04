@@ -1,0 +1,25 @@
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
+
+# Custom for developer friendliness
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+*.sh            text eol=lf
+
+# Gradle wrapper
+gradlew         text eol=lf
+gradlew.bat     text eol=crlf
+gradle-wrapper.jar binary
+
+# Binary files
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.ico           binary
+*.webp          binary
+*.jar           binary
+*.aar           binary
+*.keystore      binary
+*.jks           binary
