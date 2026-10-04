@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Dark Palette matching portfolio.knightkun.codes -->
+    <color name="brand_black">#000000</color>
+    <color name="brand_surface">#0A0A0A</color>
+    <color name="brand_surface_variant">#141414</color>
+    <color name="brand_card">#0E0E0E</color>
+    <color name="brand_card_hover">#181818</color>
+    <color name="brand_border">#222222</color>
+    <color name="brand_border_subtle">#1C1C1C</color>
+    <color name="brand_border_accent">#333333</color>
+
+    <!-- Brand Accents -->
+    <color name="brand_gold">#F4D03F</color>
+    <color name="brand_gold_dark">#D4AC0D</color>
+    <color name="brand_gold_container">#2B240B</color>
+    <color name="brand_amber">#FFB347</color>
+    <color name="brand_cream">#FFF8E7</color>
+
+    <!-- Typography -->
+    <color name="brand_text_primary">#F5F5F5</color>
+    <color name="brand_text_secondary">#A3A3A3</color>
+    <color name="brand_text_muted">#737373</color>
+
+    <!-- Status Badges (No glow, clean flat borders) -->
+    <color name="status_live_bg">#064E3B</color>
+    <color name="status_live_text">#6EE7B7</color>
+    <color name="status_live_border">#047857</color>
+
+    <color name="status_progress_bg">#78350F</color>
+    <color name="status_progress_text">#FCD34D</color>
+    <color name="status_progress_border">#B45309</color>
+
+    <!-- Chrome & Overlays -->
+    <color name="scrim_dark">#99000000</color>
+    <color name="chip_bg">#141414</color>
+    <color name="chip_border">#262626</color>
+    <color name="chip_text">#D4D4D4</color>
+</resources>
