@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base Material 3 Dark Application Theme -->
+    <style name="Theme.Kirin" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Brand Color Mapping -->
+        <item name="colorPrimary">@color/brand_gold</item>
+        <item name="colorOnPrimary">@color/brand_black</item>
+        <item name="colorPrimaryContainer">@color/brand_gold_container</item>
+        <item name="colorOnPrimaryContainer">@color/brand_gold</item>
+
+        <item name="colorSecondary">@color/brand_amber</item>
+        <item name="colorOnSecondary">@color/brand_black</item>
+
+        <item name="android:colorBackground">@color/brand_black</item>
+        <item name="colorOnBackground">@color/brand_text_primary</item>
+
+        <item name="colorSurface">@color/brand_surface</item>
+        <item name="colorOnSurface">@color/brand_text_primary</item>
+        <item name="colorSurfaceVariant">@color/brand_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/brand_text_secondary</item>
+
+        <item name="colorOutline">@color/brand_border</item>
+        <item name="colorOutlineVariant">@color/brand_border_subtle</item>
+
+        <!-- System Bars -->
+        <item name="android:statusBarColor">@color/brand_black</item>
+        <item name="android:navigationBarColor">@color/brand_surface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="Widget.Kirin.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/brand_card</item>
+        <item name="strokeColor">@color/brand_border</item>
+        <item name="strokeWidth">@dimen/card_border_width</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Widget.Kirin.Button.Gold" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/brand_gold</item>
+        <item name="android:textColor">@color/brand_black</item>
+        <item name="cornerRadius">@dimen/chip_corner_radius</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Kirin.Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@color/brand_surface_variant</item>
+        <item name="strokeColor">@color/brand_border_accent</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/brand_text_primary</item>
+        <item name="cornerRadius">@dimen/chip_corner_radius</item>
+    </style>
+
+    <!-- Chip Styles -->
+    <style name="Widget.Kirin.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="chipStrokeColor">@color/chip_border</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="chipCornerRadius">@dimen/chip_corner_radius</item>
+    </style>
+</resources>
