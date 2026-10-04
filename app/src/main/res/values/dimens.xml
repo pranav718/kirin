@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard Spacing -->
+    <dimen name="spacing_2">2dp</dimen>
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_6">6dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_32">32dp</dimen>
+
+    <!-- Component Sizing -->
+    <dimen name="avatar_size_home">68dp</dimen>
+    <dimen name="avatar_border">1.5dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="card_border_width">1dp</dimen>
+    <dimen name="card_image_height">145dp</dimen>
+    <dimen name="detail_banner_height">180dp</dimen>
+
+    <!-- Chip Sizing -->
+    <dimen name="chip_corner_radius">6dp</dimen>
+    <dimen name="chip_padding_horizontal">10dp</dimen>
+    <dimen name="chip_padding_vertical">4dp</dimen>
+    <dimen name="badge_corner_radius">4dp</dimen>
+
+    <!-- App Bar & Bottom Nav -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="bottom_nav_height">60dp</dimen>
+</resources>
