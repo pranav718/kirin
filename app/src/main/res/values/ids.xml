@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="home_dest" type="id" />
+    <item name="projects_dest" type="id" />
+    <item name="project_detail_dest" type="id" />
+    <item name="blog_dest" type="id" />
+    <item name="about_dest" type="id" />
+    <item name="action_home_to_projectDetail" type="id" />
+    <item name="action_projects_to_projectDetail" type="id" />
+</resources>
