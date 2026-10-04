@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Kirin.Card"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_project_image"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="@color/brand_surface_variant"
+            android:contentDescription="@string/section_featured"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_project_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/brand_text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="tunneru" />
+
+            <TextView
+                android:id="@+id/tv_project_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_status_live"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="2dp"
+                android:text="@string/status_live"
+                android:textColor="@color/status_live_text"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_project_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/brand_text_secondary"
+            android:textSize="11.5sp"
+            tools:text="zero-dependency tunneling engine &amp; binary multiplexer in Go." />
+
+        <TextView
+            android:id="@+id/tv_project_tech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/brand_gold"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            tools:text="Go • Next.js • WebSockets • Bubbletea" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
