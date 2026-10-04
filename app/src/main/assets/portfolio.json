@@ -1,0 +1,462 @@
+{
+  "profile": {
+    "name": "Pranav Ray",
+    "title": "Systems & Distributed Backend",
+    "bio": "building concurrent architectures, peer-to-peer networks, and zero-dependency low-level engines in Go.",
+    "aboutFull": "basically, i just like building backend systems. a lot. nowadays i'm designing concurrent architectures thus diving deep into peer-to-peer networks and distributed systems. in my free time, i like to write blogs, read, solve algorithms and pretend to be good at chess.",
+    "quote": "inside, i'm infinite",
+    "avatarUrl": "https://portfolio.knightkun.codes/images/avatar.jpg",
+    "resumeUrl": "https://portfolio.knightkun.codes/resume.pdf",
+    "email": "raypranav718@gmail.com",
+    "socials": [
+      {
+        "id": "github",
+        "platform": "GitHub",
+        "username": "pranav718",
+        "url": "https://github.com/pranav718"
+      },
+      {
+        "id": "linkedin",
+        "platform": "LinkedIn",
+        "username": "pranav-ray",
+        "url": "https://www.linkedin.com/in/pranav-ray-9ab54133b/"
+      },
+      {
+        "id": "x",
+        "platform": "X (Twitter)",
+        "username": "knightkun__",
+        "url": "https://x.com/knightkun__"
+      },
+      {
+        "id": "medium",
+        "platform": "Medium",
+        "username": "@knightkun",
+        "url": "https://medium.com/@knightkun"
+      },
+      {
+        "id": "leetcode",
+        "platform": "LeetCode",
+        "username": "pranav718",
+        "url": "https://leetcode.com/pranav718"
+      },
+      {
+        "id": "codeforces",
+        "platform": "Codeforces",
+        "username": "knightkun__",
+        "url": "https://codeforces.com/profile/knightkun__"
+      },
+      {
+        "id": "chess",
+        "platform": "Chess.com",
+        "username": "knightkun0_0",
+        "url": "https://www.chess.com/member/knightkun0_0"
+      },
+      {
+        "id": "discord",
+        "platform": "Discord",
+        "username": "knightkun__",
+        "url": "https://discord.com/users/knightkun__"
+      },
+      {
+        "id": "buymeacoffee",
+        "platform": "BuyMeACoffee",
+        "username": "pranavray777",
+        "url": "https://buymeacoffee.com/pranavray777"
+      },
+      {
+        "id": "space",
+        "platform": "Web Space",
+        "username": "knightkun.codes",
+        "url": "https://knightkun.codes"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "tunneru",
+      "title": "tunneru",
+      "description": "a lightweight zero-dependency tunneling engine, binary multiplexer, and real-time request inspection suite built in raw go from first principles. features custom 9-byte binary stream framing, interactive bubble tea terminal tui telemetry, and a next.js web dashboard with 1-click webhook replay.",
+      "longDescription": "tunneru is a lightweight zero-dependency tunneling engine, binary multiplexer, and real-time request inspection suite built in raw go from first principles without using external tunneling services or third-party cloud lock-in. it implements custom stream multiplexing over a single persistent tcp connection using an ultra-compact 9-byte binary frame header with zero-allocation fast-path parsing and sub-millisecond dispatch latency. tunneru provides dual telemetry: an interactive terminal tui built with bubble tea and lipgloss for live request streaming, and a dedicated next.js web dashboard with json tree inspection, raw header diffs, and 1-click webhook replay. it supports instant public subdomain routing and shared token authentication.",
+      "techStack": [
+        "Go",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Bubbletea",
+        "WebSockets"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/tunneru",
+      "liveUrl": "https://tunneru.knightkun.codes",
+      "postUrl": "https://x.com/knightkun__/status/2092266377499558009?s=20",
+      "image": "https://portfolio.knightkun.codes/images/projects/tunneru.png",
+      "videoUrl": "https://portfolio.knightkun.codes/videos/projects/tunneru.mp4"
+    },
+    {
+      "id": "hotaru",
+      "title": "hotaru",
+      "description": "p2p mesh network & distributed file dispersal system written in raw go. breaks files into chunks, scatters them encrypted across nodes, and reconstructs on demand.",
+      "longDescription": "hotaru is a decentralized peer-to-peer network and distributed storage system built from first principles in Go without libp2p or external frameworks. Nodes form a self-organizing mesh topology using custom TCP framing, automated peer discovery via UDP broadcasts, and dynamic routing tables. Files are sharded into deterministic chunks, hashed using BLAKE3, encrypted via AES-256-GCM, and dispersed redundantly across available network peers. Features real-time SSE streaming to a Next.js visualization dashboard tracking cluster topology and transfer telemetry.",
+      "techStack": [
+        "Go",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Framer Motion",
+        "SSE"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/hotaru",
+      "liveUrl": "https://hotaru.knightkun.codes",
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/hotaru.png",
+      "videoUrl": null
+    },
+    {
+      "id": "tsuna",
+      "title": "tsuna",
+      "description": "udp hole punching & direct peer-to-peer packet streaming engine in golang. bypasses symmetrical and cone nat gateways without relay servers.",
+      "longDescription": "tsuna demonstrates how to achieve direct UDP hole punching across complex NAT architectures without relying on third-party TURN relay proxies. Includes a lightweight coordination rendezvous server and client daemon that negotiate public endpoint mappings, punch bidirectional NAT pinholes, and establish low-latency peer-to-peer channels for direct socket transmission. Features an interactive terminal UI built with Bubbletea and Cobra.",
+      "techStack": [
+        "Go",
+        "Cobra",
+        "Bubbletea",
+        "Next.js",
+        "React",
+        "WebSockets"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/tsuna",
+      "liveUrl": "https://tsuna.knightkun.codes",
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/tsuna.png",
+      "videoUrl": null
+    },
+    {
+      "id": "typingterminal",
+      "title": "typingterminal",
+      "description": "real-time multiplayer typing speed combat and leaderboard engine built with convex and next.js.",
+      "longDescription": "terminaltype is a competitive typing platform featuring sub-10ms real-time state synchronization, live spectator rooms, dynamic WPM calculation, and concurrent keystroke verification powered by Convex server functions. Built with responsive dark mode aesthetics and fluid keyboard ergonomics.",
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Convex",
+        "Framer Motion"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/TerminalType",
+      "liveUrl": "https://typingterminal.knightkun.codes",
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/typingterminal.png",
+      "videoUrl": null
+    },
+    {
+      "id": "tobira",
+      "title": "tobira",
+      "description": "a modern reverse proxy and edge routing suite featuring real-time connection inspection and D3.js topology visualization.",
+      "longDescription": "tobira provides transparent reverse proxying, TLS termination, path-based routing, and real-time HTTP metrics. Implemented with concurrent worker pools in Go, streaming WebSocket telemetry to an interactive web inspector for live debugging.",
+      "techStack": [
+        "Go",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "D3.js",
+        "WebSockets",
+        "Caddy"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/tobira",
+      "liveUrl": "https://tobira.knightkun.codes",
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/tobira.png",
+      "videoUrl": null
+    },
+    {
+      "id": "personal-space",
+      "title": "personal space",
+      "description": "an interactive 3D WebGL developer room built with Three.js, React Three Fiber, GLSL shaders, and spatial audio.",
+      "longDescription": "an immersive virtual workspace featuring dynamic lighting, postprocessing passes, interactive model inspections, and custom GLSL vertex shaders rendered directly in the browser.",
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Three.js",
+        "React Three Fiber",
+        "Drei",
+        "GLSL",
+        "WebGL"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/personal-space",
+      "liveUrl": "https://knightkun.codes",
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/personal-space.png",
+      "videoUrl": null
+    },
+    {
+      "id": "ikiru",
+      "title": "ikiru",
+      "description": "minimalist terminal system monitor and resource visualizer written in pure Go with Bubbletea and Lipgloss.",
+      "longDescription": "real-time hardware metrics collector tracking per-core CPU load, memory utilization, disk I/O, and active network interfaces with low CPU footprint and sleek terminal styling.",
+      "techStack": [
+        "Go",
+        "Bubbletea",
+        "Lipgloss",
+        "Cobra",
+        "gopsutil"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/ikiru",
+      "liveUrl": null,
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/ikiru.png",
+      "videoUrl": null
+    },
+    {
+      "id": "goatcast",
+      "title": "goatcast",
+      "description": "curated audio knowledge platform indexing top tech lectures and interviews with MongoDB and Prisma.",
+      "longDescription": "audio streaming web platform featuring episode transcripts, keyword bookmarking, and automated feed aggregation from technical creators and engineering talks.",
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Prisma",
+        "MongoDB",
+        "YouTube API"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/goatcast",
+      "liveUrl": "https://goatcast.knightkun.codes",
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/goatcast.png",
+      "videoUrl": null
+    },
+    {
+      "id": "atlas",
+      "title": "atlas (uniway)",
+      "description": "interactive university campus navigation system and route finder built with Leaflet and Next.js.",
+      "longDescription": "geospatial routing client calculating shortest pedestrian pathways between lecture halls, research facilities, and campus amenities with offline tile caching.",
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Leaflet"
+      ],
+      "status": "Live",
+      "githubUrl": "https://github.com/pranav718/uniway",
+      "liveUrl": "https://uniway.knightkun.codes",
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/atlas.png",
+      "videoUrl": null
+    },
+    {
+      "id": "nanimo",
+      "title": "nanimo",
+      "description": "exploratory 3D particle and physics engine built with Three.js and Zustand state management.",
+      "longDescription": "particle physics sandbox simulating gravitational bodies, vector fields, and collision kinematics running on GPU compute shaders.",
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Three.js",
+        "Zustand"
+      ],
+      "status": "In Progress",
+      "githubUrl": "https://github.com/pranav718/nanimo",
+      "liveUrl": null,
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/nanimo.png",
+      "videoUrl": null
+    },
+    {
+      "id": "musashi",
+      "title": "musashi",
+      "description": "cinematic editorial web experience utilizing GSAP scroll-triggered timelines and smooth inertia kinematics.",
+      "longDescription": "high-fidelity typographical web showcase exploring historical narratives through scroll-driven canvas transitions and SVG path morphing.",
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "GSAP"
+      ],
+      "status": "In Progress",
+      "githubUrl": "https://github.com/pranav718/musashi",
+      "liveUrl": null,
+      "postUrl": null,
+      "image": "https://portfolio.knightkun.codes/images/projects/musashi.png",
+      "videoUrl": null
+    }
+  ],
+  "articles": [
+    {
+      "id": "understanding-convex-terminaltype",
+      "title": "Understanding Convex Through TerminalType: My Real-Time Typing App",
+      "url": "https://medium.com/@knightkun/understanding-convex-through-terminaltype-my-real-time-typing-app-59af77041922",
+      "date": "Oct 2025",
+      "claps": 151,
+      "tags": [
+        "Convex",
+        "Realtime Applications",
+        "Backend Engineering"
+      ]
+    },
+    {
+      "id": "udp-hole-punching-tsuna",
+      "title": "UDP Hole Punching from Scratch in Golang: Building Tsuna",
+      "url": "https://medium.com/@knightkun/udp-hole-punching-from-scratch-in-golang-building-tsuna-448ca66a733b",
+      "date": "May 2026",
+      "claps": 55,
+      "tags": [
+        "Golang",
+        "Networking",
+        "Peer To Peer",
+        "Systems Programming"
+      ]
+    },
+    {
+      "id": "raft-consensus-go",
+      "title": "Raft Consensus, Explained Simply (Then Built in Go)",
+      "url": "https://medium.com/@knightkun/raft-consensus-explained-simply-then-built-in-go-f642531b6527",
+      "date": "Jul 2026",
+      "claps": 61,
+      "tags": [
+        "Golang",
+        "Distributed Systems",
+        "Raft",
+        "Backend"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Go",
+      "category": "LANGUAGES"
+    },
+    {
+      "name": "Python",
+      "category": "LANGUAGES"
+    },
+    {
+      "name": "TypeScript",
+      "category": "LANGUAGES"
+    },
+    {
+      "name": "JavaScript",
+      "category": "LANGUAGES"
+    },
+    {
+      "name": "Swift",
+      "category": "LANGUAGES"
+    },
+    {
+      "name": "C/C++",
+      "category": "LANGUAGES"
+    },
+    {
+      "name": "SQL",
+      "category": "LANGUAGES"
+    },
+    {
+      "name": "Express",
+      "category": "BACKEND"
+    },
+    {
+      "name": "Node",
+      "category": "BACKEND"
+    },
+    {
+      "name": "Bun",
+      "category": "BACKEND"
+    },
+    {
+      "name": "Convex",
+      "category": "BACKEND"
+    },
+    {
+      "name": "WebSockets",
+      "category": "BACKEND"
+    },
+    {
+      "name": "Prisma",
+      "category": "BACKEND"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "DATABASES"
+    },
+    {
+      "name": "MongoDB",
+      "category": "DATABASES"
+    },
+    {
+      "name": "Redis",
+      "category": "DATABASES"
+    },
+    {
+      "name": "React",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "Next.js",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "Tailwind",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "shadcn",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "Motion",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "GSAP",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "Zustand",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "Three.js",
+      "category": "FRONTEND"
+    },
+    {
+      "name": "Docker",
+      "category": "TOOLS"
+    },
+    {
+      "name": "Git",
+      "category": "TOOLS"
+    },
+    {
+      "name": "GitHub",
+      "category": "TOOLS"
+    },
+    {
+      "name": "Postman",
+      "category": "TOOLS"
+    },
+    {
+      "name": "Figma",
+      "category": "TOOLS"
+    },
+    {
+      "name": "Railway",
+      "category": "TOOLS"
+    },
+    {
+      "name": "Leaflet",
+      "category": "TOOLS"
+    }
+  ]
+}
