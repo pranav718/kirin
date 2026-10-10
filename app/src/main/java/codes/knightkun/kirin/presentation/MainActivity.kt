@@ -1,8 +1,15 @@
 package codes.knightkun.kirin.presentation
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.view.MenuProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
@@ -54,6 +61,41 @@ class MainActivity : AppCompatActivity() {
                 binding.bottomNav.visibility = View.VISIBLE
             }
         }
+
+        setupMenuProvider()
+    }
+
+    private fun setupMenuProvider() {
+        addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.main_menu, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when (menuItem.itemId) {
+                    R.id.action_web -> {
+                        val customTabsIntent = CustomTabsIntent.Builder().setShowTitle(true).build()
+                        customTabsIntent.launchUrl(
+                            this@MainActivity,
+                            Uri.parse("https://portfolio.knightkun.codes")
+                        )
+                        true
+                    }
+                    R.id.action_share -> {
+                        val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                            type = "text/plain"
+                            putExtra(
+                                Intent.EXTRA_TEXT,
+                                "Pranav Ray - Systems & Distributed Backend Portfolio\nhttps://portfolio.knightkun.codes"
+                            )
+                        }
+                        startActivity(Intent.createChooser(shareIntent, getString(R.string.action_share)))
+                        true
+                    }
+                    else -> false
+                }
+            }
+        }, this)
     }
 
     override fun onSupportNavigateUp(): Boolean {
