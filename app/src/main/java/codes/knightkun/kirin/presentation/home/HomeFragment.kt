@@ -59,6 +59,15 @@ class HomeFragment : Fragment() {
         binding.tvViewAllProjects.setOnClickListener {
             findNavController().navigate(R.id.projects_dest)
         }
+        binding.cardStatProjects.setOnClickListener {
+            findNavController().navigate(R.id.projects_dest)
+        }
+        binding.cardStatArticles.setOnClickListener {
+            findNavController().navigate(R.id.blog_dest)
+        }
+        binding.cardStatSkills.setOnClickListener {
+            findNavController().navigate(R.id.about_dest)
+        }
     }
 
     private fun observeUiState() {
