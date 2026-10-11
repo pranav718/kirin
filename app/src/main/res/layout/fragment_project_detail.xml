@@ -134,6 +134,15 @@
                 android:text="@string/action_open_demo"
                 android:textSize="12.5sp" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_share_project"
+                style="@style/Widget.Kirin.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/action_share"
+                android:textSize="12.5sp" />
+
         </LinearLayout>
 
     </LinearLayout>
