@@ -138,6 +138,21 @@ class ProjectDetailFragment : Fragment() {
         } else {
             binding.btnLiveDemo.visibility = View.GONE
         }
+
+        binding.btnShareProject.setOnClickListener {
+            val shareText = buildString {
+                append("${project.title} - ${project.description}\n")
+                if (!project.liveUrl.isNullOrBlank()) {
+                    append("Live: ${project.liveUrl}\n")
+                }
+                append("GitHub: ${project.githubUrl}")
+            }
+            val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                type = "text/plain"
+                putExtra(Intent.EXTRA_TEXT, shareText)
+            }
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.action_share)))
+        }
     }
 
     override fun onDestroyView() {
