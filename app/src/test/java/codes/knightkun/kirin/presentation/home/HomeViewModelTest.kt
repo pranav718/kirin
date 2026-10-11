@@ -49,14 +49,17 @@ class HomeViewModelTest {
 
     private class FakeRepo(
         private val profileResult: Result<Profile>,
-        private val featuredResult: Result<List<Project>>
+        private val featuredResult: Result<List<Project>>,
+        private val projectsResult: Result<List<Project>> = Result.success(emptyList()),
+        private val articlesResult: Result<List<Article>> = Result.success(emptyList()),
+        private val skillsResult: Result<List<Skill>> = Result.success(emptyList())
     ) : PortfolioRepository {
         override suspend fun getProfile(): Result<Profile> = profileResult
-        override suspend fun getProjects(): Result<List<Project>> = Result.success(emptyList())
+        override suspend fun getProjects(): Result<List<Project>> = projectsResult
         override suspend fun getProjectById(id: String): Result<Project?> = Result.success(null)
         override suspend fun getFeaturedProjects(): Result<List<Project>> = featuredResult
-        override suspend fun getArticles(): Result<List<Article>> = Result.success(emptyList())
-        override suspend fun getSkills(): Result<List<Skill>> = Result.success(emptyList())
+        override suspend fun getArticles(): Result<List<Article>> = articlesResult
+        override suspend fun getSkills(): Result<List<Skill>> = skillsResult
         override suspend fun getSkillsByCategory(category: SkillCategory): Result<List<Skill>> = Result.success(emptyList())
     }
 
@@ -83,6 +86,30 @@ class HomeViewModelTest {
         assertEquals("Pranav Ray", success.profile.name)
         assertEquals(1, success.featuredProjects.size)
         assertEquals("tunneru", success.featuredProjects.first().id)
+    }
+
+    @Test
+    fun `viewModel calculates dashboard metrics correctly for projects, articles, and skills`() = runTest {
+        val repo = FakeRepo(
+            profileResult = Result.success(fakeProfile),
+            featuredResult = Result.success(fakeFeatured),
+            projectsResult = Result.success(fakeFeatured),
+            articlesResult = Result.success(listOf(Article("a1", "title", "url", "date", 100))),
+            skillsResult = Result.success(listOf(
+                Skill("Go", SkillCategory.LANGUAGES),
+                Skill("Rust", SkillCategory.LANGUAGES)
+            ))
+        )
+        val viewModel = HomeViewModel(repo)
+
+        advanceUntilIdle()
+
+        val state = viewModel.uiState.value
+        assertTrue(state is HomeUiState.Success)
+        val success = state as HomeUiState.Success
+        assertEquals(1, success.projectCount)
+        assertEquals(1, success.articleCount)
+        assertEquals(2, success.skillCount)
     }
 
     @Test
