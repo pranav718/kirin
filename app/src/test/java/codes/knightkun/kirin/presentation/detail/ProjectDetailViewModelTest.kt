@@ -73,6 +73,24 @@ class ProjectDetailViewModelTest {
         val success = state as ProjectDetailUiState.Success
         assertEquals("tunneru", success.project.id)
         assertEquals("tunneru", success.project.title)
+        assertTrue(success.project.isLive)
+    }
+
+    @Test
+    fun `viewModel exposes project with verified in-progress status and tech stack tags`() = runTest {
+        val inProgressProject = fakeProject.copy(id = "nanimo", status = "In Progress", liveUrl = null)
+        val repo = FakeRepo(inProgressProject)
+        val viewModel = ProjectDetailViewModel(repo, "nanimo")
+
+        advanceUntilIdle()
+
+        val state = viewModel.uiState.value
+        assertTrue(state is ProjectDetailUiState.Success)
+        val success = state as ProjectDetailUiState.Success
+        assertEquals(false, success.project.isLive)
+        assertEquals(3, success.project.techStack.size)
+        assertTrue(success.project.techStack.contains("Go"))
+        assertEquals("https://github.com/pranav718/tunneru", success.project.githubUrl)
     }
 
     @Test
