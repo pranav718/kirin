@@ -103,4 +103,27 @@ class ProjectsViewModelTest {
         assertEquals(1, state.filteredProjects.size)
         assertEquals("tunneru", state.filteredProjects.first().id)
     }
+
+    @Test
+    fun `viewModel reload recovers to success after initial failure`() = runTest {
+        var fail = true
+        val flakyRepo = object : PortfolioRepository {
+            override suspend fun getProfile(): Result<Profile> = Result.failure(Exception())
+            override suspend fun getProjects(): Result<List<Project>> =
+                if (fail) Result.failure(RuntimeException("Flaky network")) else Result.success(fakeProjects)
+            override suspend fun getProjectById(id: String): Result<Project?> = Result.success(null)
+            override suspend fun getFeaturedProjects(): Result<List<Project>> = Result.success(emptyList())
+            override suspend fun getArticles(): Result<List<Article>> = Result.success(emptyList())
+            override suspend fun getSkills(): Result<List<Skill>> = Result.success(emptyList())
+            override suspend fun getSkillsByCategory(category: SkillCategory): Result<List<Skill>> = Result.success(emptyList())
+        }
+        val viewModel = ProjectsViewModel(flakyRepo)
+        advanceUntilIdle()
+        assertTrue(viewModel.uiState.value is ProjectsUiState.Error)
+
+        fail = false
+        viewModel.loadProjects()
+        advanceUntilIdle()
+        assertTrue(viewModel.uiState.value is ProjectsUiState.Success)
+    }
 }
