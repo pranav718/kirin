@@ -68,6 +68,9 @@ class HomeFragment : Fragment() {
         binding.cardStatSkills.setOnClickListener {
             findNavController().navigate(R.id.about_dest)
         }
+        binding.tvErrorHome.setOnClickListener {
+            viewModel.loadHomeData()
+        }
     }
 
     private fun observeUiState() {
@@ -82,7 +85,7 @@ class HomeFragment : Fragment() {
                         is HomeUiState.Error -> {
                             binding.progressHome.visibility = View.GONE
                             binding.tvErrorHome.visibility = View.VISIBLE
-                            binding.tvErrorHome.text = state.message
+                            binding.tvErrorHome.text = "${state.message}\nTap to retry"
                         }
                         is HomeUiState.Success -> {
                             binding.progressHome.visibility = View.GONE

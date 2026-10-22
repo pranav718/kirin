@@ -43,6 +43,9 @@ class AboutFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.tvErrorAbout.setOnClickListener {
+            viewModel.loadAboutData()
+        }
         observeUiState()
     }
 
@@ -60,7 +63,7 @@ class AboutFragment : Fragment() {
                             binding.progressAbout.visibility = View.GONE
                             binding.layoutContentAbout.visibility = View.GONE
                             binding.tvErrorAbout.visibility = View.VISIBLE
-                            binding.tvErrorAbout.text = state.message
+                            binding.tvErrorAbout.text = "${state.message}\nTap to retry"
                         }
                         is AboutUiState.Success -> {
                             binding.progressAbout.visibility = View.GONE

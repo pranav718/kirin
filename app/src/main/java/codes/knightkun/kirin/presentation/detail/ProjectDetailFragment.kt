@@ -48,6 +48,9 @@ class ProjectDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.tvErrorDetail.setOnClickListener {
+            viewModel.loadProject()
+        }
         observeUiState()
     }
 
@@ -65,7 +68,7 @@ class ProjectDetailFragment : Fragment() {
                             binding.progressDetail.visibility = View.GONE
                             binding.layoutContentDetail.visibility = View.GONE
                             binding.tvErrorDetail.visibility = View.VISIBLE
-                            binding.tvErrorDetail.text = state.message
+                            binding.tvErrorDetail.text = "${state.message}\nTap to retry"
                         }
                         is ProjectDetailUiState.Success -> {
                             binding.progressDetail.visibility = View.GONE

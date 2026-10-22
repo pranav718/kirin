@@ -51,6 +51,9 @@ class BlogFragment : Fragment() {
             customTabsIntent.launchUrl(requireContext(), Uri.parse(article.url))
         }
         binding.rvBlog.adapter = blogAdapter
+        binding.tvEmptyBlog.setOnClickListener {
+            viewModel.loadArticles()
+        }
     }
 
     private fun observeUiState() {
@@ -67,7 +70,7 @@ class BlogFragment : Fragment() {
                             binding.progressBlog.visibility = View.GONE
                             binding.rvBlog.visibility = View.GONE
                             binding.tvEmptyBlog.visibility = View.VISIBLE
-                            binding.tvEmptyBlog.text = state.message
+                            binding.tvEmptyBlog.text = "${state.message}\nTap to retry"
                         }
                         is BlogUiState.Success -> {
                             binding.progressBlog.visibility = View.GONE
