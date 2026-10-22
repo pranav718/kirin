@@ -44,7 +44,7 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:contentDescription="@string/search_hint"
-            android:src="@drawable/ic_arrow_back"
+            android:src="@drawable/ic_clear"
             android:visibility="gone"
             app:tint="@color/brand_text_muted" />
 
