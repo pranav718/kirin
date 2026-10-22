@@ -55,7 +55,13 @@ class ProjectsFragment : Fragment() {
 
     private fun setupSearchAndFilters() {
         binding.etSearch.doAfterTextChanged { text ->
-            viewModel.setSearchQuery(text?.toString() ?: "")
+            val query = text?.toString() ?: ""
+            viewModel.setSearchQuery(query)
+            binding.ivClearSearch.visibility = if (query.isEmpty()) View.GONE else View.VISIBLE
+        }
+
+        binding.ivClearSearch.setOnClickListener {
+            binding.etSearch.text?.clear()
         }
 
         binding.chipGroupFilters.setOnCheckedStateChangeListener { _, checkedIds ->
