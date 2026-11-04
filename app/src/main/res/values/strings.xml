@@ -13,9 +13,9 @@
     <string name="author_name">Pranav Ray</string>
     <string name="author_title">Systems &amp; Distributed Backend</string>
     <string name="author_handle">portfolio.knightkun.codes</string>
-    <string name="author_bio">building concurrent architectures, peer-to-peer networks, and zero-dependency low-level engines in Go.</string>
-    <string name="author_about_full">basically, i just like building backend systems. a lot. nowadays i\'m designing concurrent architectures thus diving deep into peer-to-peer networks and distributed systems. in my free time, i like to write blogs, read, solve algorithms and pretend to be good at chess.</string>
-    <string name="quote_vagabond">"inside, i\'m infinite"</string>
+    <string name="author_bio">Building concurrent architectures, peer-to-peer networks, and zero-dependency low-level engines in Go.</string>
+    <string name="author_about_full">I love building backend systems. Nowadays, I\'m designing concurrent architectures and diving deep into peer-to-peer networks and distributed systems. In my free time, I write technical articles, read, solve algorithmic problems, and pretend to be good at chess.</string>
+    <string name="quote_vagabond"></string>
 
     <!-- Actions -->
     <string name="action_resume">Resume PDF</string>

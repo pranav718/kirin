@@ -2,9 +2,9 @@
   "profile": {
     "name": "Pranav Ray",
     "title": "Systems & Distributed Backend",
-    "bio": "building concurrent architectures, peer-to-peer networks, and zero-dependency low-level engines in Go.",
-    "aboutFull": "basically, i just like building backend systems. a lot. nowadays i'm designing concurrent architectures thus diving deep into peer-to-peer networks and distributed systems. in my free time, i like to write blogs, read, solve algorithms and pretend to be good at chess.",
-    "quote": "inside, i'm infinite",
+    "bio": "Building concurrent architectures, peer-to-peer networks, and zero-dependency low-level engines in Go.",
+    "aboutFull": "I love building backend systems. Nowadays, I'm designing concurrent architectures and diving deep into peer-to-peer networks and distributed systems. In my free time, I write technical articles, read, solve algorithmic problems, and pretend to be good at chess.",
+    "quote": "",
     "avatarUrl": "https://portfolio.knightkun.codes/images/avatar.jpg",
     "resumeUrl": "https://portfolio.knightkun.codes/resume.pdf",
     "email": "raypranav718@gmail.com",
@@ -75,8 +75,8 @@
     {
       "id": "tunneru",
       "title": "tunneru",
-      "description": "a lightweight zero-dependency tunneling engine, binary multiplexer, and real-time request inspection suite built in raw go from first principles. features custom 9-byte binary stream framing, interactive bubble tea terminal tui telemetry, and a next.js web dashboard with 1-click webhook replay.",
-      "longDescription": "tunneru is a lightweight zero-dependency tunneling engine, binary multiplexer, and real-time request inspection suite built in raw go from first principles without using external tunneling services or third-party cloud lock-in. it implements custom stream multiplexing over a single persistent tcp connection using an ultra-compact 9-byte binary frame header with zero-allocation fast-path parsing and sub-millisecond dispatch latency. tunneru provides dual telemetry: an interactive terminal tui built with bubble tea and lipgloss for live request streaming, and a dedicated next.js web dashboard with json tree inspection, raw header diffs, and 1-click webhook replay. it supports instant public subdomain routing and shared token authentication.",
+      "description": "A lightweight zero-dependency tunneling engine, binary multiplexer, and real-time request inspection suite built in raw Go from first principles. Features custom 9-byte binary stream framing, interactive Bubble Tea terminal TUI telemetry, and a Next.js web dashboard with 1-click webhook replay.",
+      "longDescription": "Tunneru is a lightweight zero-dependency tunneling engine, binary multiplexer, and real-time request inspection suite built in raw Go from first principles without using external tunneling services or third-party cloud lock-in. It implements custom stream multiplexing over a single persistent TCP connection using an ultra-compact 9-byte binary frame header with zero-allocation fast-path parsing and sub-millisecond dispatch latency. Tunneru provides dual telemetry: an interactive terminal TUI built with Bubble Tea and Lipgloss for live request streaming, and a dedicated Next.js web dashboard with JSON tree inspection, raw header diffs, and 1-click webhook replay. It supports instant public subdomain routing and shared token authentication.",
       "techStack": [
         "Go",
         "Next.js",
@@ -96,8 +96,8 @@
     {
       "id": "hotaru",
       "title": "hotaru",
-      "description": "p2p mesh network & distributed file dispersal system written in raw go. breaks files into chunks, scatters them encrypted across nodes, and reconstructs on demand.",
-      "longDescription": "hotaru is a decentralized peer-to-peer network and distributed storage system built from first principles in Go without libp2p or external frameworks. Nodes form a self-organizing mesh topology using custom TCP framing, automated peer discovery via UDP broadcasts, and dynamic routing tables. Files are sharded into deterministic chunks, hashed using BLAKE3, encrypted via AES-256-GCM, and dispersed redundantly across available network peers. Features real-time SSE streaming to a Next.js visualization dashboard tracking cluster topology and transfer telemetry.",
+      "description": "P2P mesh network and distributed file dispersal system written in raw Go. Breaks files into chunks, scatters them encrypted across nodes, and reconstructs on demand.",
+      "longDescription": "Hotaru is a decentralized peer-to-peer network and distributed storage system built from first principles in Go without libp2p or external frameworks. Nodes form a self-organizing mesh topology using custom TCP framing, automated peer discovery via UDP broadcasts, and dynamic routing tables. Files are sharded into deterministic chunks, hashed using BLAKE3, encrypted via AES-256-GCM, and dispersed redundantly across available network peers. Features real-time SSE streaming to a Next.js visualization dashboard tracking cluster topology and transfer telemetry.",
       "techStack": [
         "Go",
         "Next.js",
@@ -117,8 +117,8 @@
     {
       "id": "tsuna",
       "title": "tsuna",
-      "description": "udp hole punching & direct peer-to-peer packet streaming engine in golang. bypasses symmetrical and cone nat gateways without relay servers.",
-      "longDescription": "tsuna demonstrates how to achieve direct UDP hole punching across complex NAT architectures without relying on third-party TURN relay proxies. Includes a lightweight coordination rendezvous server and client daemon that negotiate public endpoint mappings, punch bidirectional NAT pinholes, and establish low-latency peer-to-peer channels for direct socket transmission. Features an interactive terminal UI built with Bubbletea and Cobra.",
+      "description": "UDP hole punching and direct peer-to-peer packet streaming engine in Go. Bypasses symmetrical and cone NAT gateways without relay servers.",
+      "longDescription": "Tsuna demonstrates how to achieve direct UDP hole punching across complex NAT architectures without relying on third-party TURN relay proxies. Includes a lightweight coordination rendezvous server and client daemon that negotiate public endpoint mappings, punch bidirectional NAT pinholes, and establish low-latency peer-to-peer channels for direct socket transmission. Features an interactive terminal UI built with Bubbletea and Cobra.",
       "techStack": [
         "Go",
         "Cobra",
@@ -137,8 +137,8 @@
     {
       "id": "typingterminal",
       "title": "typingterminal",
-      "description": "real-time multiplayer typing speed combat and leaderboard engine built with convex and next.js.",
-      "longDescription": "terminaltype is a competitive typing platform featuring sub-10ms real-time state synchronization, live spectator rooms, dynamic WPM calculation, and concurrent keystroke verification powered by Convex server functions. Built with responsive dark mode aesthetics and fluid keyboard ergonomics.",
+      "description": "Real-time multiplayer typing speed combat and leaderboard engine built with Convex and Next.js.",
+      "longDescription": "TerminalType is a competitive typing platform featuring sub-10ms real-time state synchronization, live spectator rooms, dynamic WPM calculation, and concurrent keystroke verification powered by Convex server functions. Built with responsive dark mode aesthetics and fluid keyboard ergonomics.",
       "techStack": [
         "Next.js",
         "React",
@@ -157,8 +157,8 @@
     {
       "id": "tobira",
       "title": "tobira",
-      "description": "a modern reverse proxy and edge routing suite featuring real-time connection inspection and D3.js topology visualization.",
-      "longDescription": "tobira provides transparent reverse proxying, TLS termination, path-based routing, and real-time HTTP metrics. Implemented with concurrent worker pools in Go, streaming WebSocket telemetry to an interactive web inspector for live debugging.",
+      "description": "A modern reverse proxy and edge routing suite featuring real-time connection inspection and D3.js topology visualization.",
+      "longDescription": "Tobira provides transparent reverse proxying, TLS termination, path-based routing, and real-time HTTP metrics. Implemented with concurrent worker pools in Go, streaming WebSocket telemetry to an interactive web inspector for live debugging.",
       "techStack": [
         "Go",
         "Next.js",
@@ -179,8 +179,8 @@
     {
       "id": "personal-space",
       "title": "personal space",
-      "description": "an interactive 3D WebGL developer room built with Three.js, React Three Fiber, GLSL shaders, and spatial audio.",
-      "longDescription": "an immersive virtual workspace featuring dynamic lighting, postprocessing passes, interactive model inspections, and custom GLSL vertex shaders rendered directly in the browser.",
+      "description": "An interactive 3D WebGL developer room built with Three.js, React Three Fiber, GLSL shaders, and spatial audio.",
+      "longDescription": "An immersive virtual workspace featuring dynamic lighting, postprocessing passes, interactive model inspections, and custom GLSL vertex shaders rendered directly in the browser.",
       "techStack": [
         "Next.js",
         "React",
@@ -201,8 +201,8 @@
     {
       "id": "ikiru",
       "title": "ikiru",
-      "description": "minimalist terminal system monitor and resource visualizer written in pure Go with Bubbletea and Lipgloss.",
-      "longDescription": "real-time hardware metrics collector tracking per-core CPU load, memory utilization, disk I/O, and active network interfaces with low CPU footprint and sleek terminal styling.",
+      "description": "Minimalist terminal system monitor and resource visualizer written in pure Go with Bubbletea and Lipgloss.",
+      "longDescription": "Real-time hardware metrics collector tracking per-core CPU load, memory utilization, disk I/O, and active network interfaces with low CPU footprint and sleek terminal styling.",
       "techStack": [
         "Go",
         "Bubbletea",
@@ -220,8 +220,8 @@
     {
       "id": "goatcast",
       "title": "goatcast",
-      "description": "curated audio knowledge platform indexing top tech lectures and interviews with MongoDB and Prisma.",
-      "longDescription": "audio streaming web platform featuring episode transcripts, keyword bookmarking, and automated feed aggregation from technical creators and engineering talks.",
+      "description": "Curated audio knowledge platform indexing top tech lectures and interviews with MongoDB and Prisma.",
+      "longDescription": "Audio streaming web platform featuring episode transcripts, keyword bookmarking, and automated feed aggregation from technical creators and engineering talks.",
       "techStack": [
         "Next.js",
         "TypeScript",
@@ -240,8 +240,8 @@
     {
       "id": "atlas",
       "title": "atlas (uniway)",
-      "description": "interactive university campus navigation system and route finder built with Leaflet and Next.js.",
-      "longDescription": "geospatial routing client calculating shortest pedestrian pathways between lecture halls, research facilities, and campus amenities with offline tile caching.",
+      "description": "Interactive university campus navigation system and route finder built with Leaflet and Next.js.",
+      "longDescription": "Geospatial routing client calculating shortest pedestrian pathways between lecture halls, research facilities, and campus amenities with offline tile caching.",
       "techStack": [
         "Next.js",
         "TypeScript",
@@ -258,8 +258,8 @@
     {
       "id": "nanimo",
       "title": "nanimo",
-      "description": "exploratory 3D particle and physics engine built with Three.js and Zustand state management.",
-      "longDescription": "particle physics sandbox simulating gravitational bodies, vector fields, and collision kinematics running on GPU compute shaders.",
+      "description": "Exploratory 3D particle and physics engine built with Three.js and Zustand state management.",
+      "longDescription": "Particle physics sandbox simulating gravitational bodies, vector fields, and collision kinematics running on GPU compute shaders.",
       "techStack": [
         "Next.js",
         "TypeScript",
@@ -277,8 +277,8 @@
     {
       "id": "musashi",
       "title": "musashi",
-      "description": "cinematic editorial web experience utilizing GSAP scroll-triggered timelines and smooth inertia kinematics.",
-      "longDescription": "high-fidelity typographical web showcase exploring historical narratives through scroll-driven canvas transitions and SVG path morphing.",
+      "description": "Cinematic editorial web experience utilizing GSAP scroll-triggered timelines and smooth inertia kinematics.",
+      "longDescription": "High-fidelity typographical web showcase exploring historical narratives through scroll-driven canvas transitions and SVG path morphing.",
       "techStack": [
         "Next.js",
         "TypeScript",

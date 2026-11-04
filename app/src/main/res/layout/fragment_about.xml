@@ -52,22 +52,23 @@
                     android:orientation="vertical"
                     android:padding="18dp">
 
-                    <!-- Vagabond Quote Banner -->
+                    <!-- Vagabond Quote Banner (Hidden when empty) -->
                     <TextView
                         android:id="@+id/tv_about_quote"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.08"
-                        android:text="@string/quote_vagabond"
                         android:textColor="@color/brand_gold"
                         android:textSize="14sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold|italic"
+                        android:visibility="gone"
+                        tools:visibility="gone" />
 
                     <TextView
                         android:id="@+id/tv_about_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="0dp"
                         android:text="@string/author_name"
                         android:textColor="@color/brand_text_primary"
                         android:textSize="22sp"

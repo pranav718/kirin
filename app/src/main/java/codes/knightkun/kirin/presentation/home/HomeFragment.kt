@@ -57,19 +57,28 @@ class HomeFragment : Fragment() {
 
     private fun setupListeners() {
         binding.tvViewAllProjects.setOnClickListener {
-            findNavController().navigate(R.id.projects_dest)
+            navigateToTab(R.id.projects_dest)
         }
         binding.cardStatProjects.setOnClickListener {
-            findNavController().navigate(R.id.projects_dest)
+            navigateToTab(R.id.projects_dest)
         }
         binding.cardStatArticles.setOnClickListener {
-            findNavController().navigate(R.id.blog_dest)
+            navigateToTab(R.id.blog_dest)
         }
         binding.cardStatSkills.setOnClickListener {
-            findNavController().navigate(R.id.about_dest)
+            navigateToTab(R.id.about_dest)
         }
         binding.tvErrorHome.setOnClickListener {
             viewModel.loadHomeData()
+        }
+    }
+
+    private fun navigateToTab(destinationId: Int) {
+        val bottomNav = requireActivity().findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_nav)
+        if (bottomNav != null) {
+            bottomNav.selectedItemId = destinationId
+        } else {
+            findNavController().navigate(destinationId)
         }
     }
 

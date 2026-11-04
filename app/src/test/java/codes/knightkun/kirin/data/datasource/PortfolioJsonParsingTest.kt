@@ -30,7 +30,7 @@ class PortfolioJsonParsingTest {
 
         // Profile assertions
         assertEquals("Pranav Ray", portfolioData.profile.name)
-        assertEquals("inside, i'm infinite", portfolioData.profile.quote)
+        assertEquals("", portfolioData.profile.quote)
         assertTrue(portfolioData.profile.socials.isNotEmpty())
 
         // Projects assertions: 11 projects total (9 live, 2 in progress)

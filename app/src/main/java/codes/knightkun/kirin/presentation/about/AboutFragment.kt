@@ -79,7 +79,12 @@ class AboutFragment : Fragment() {
 
     private fun bindProfile(state: AboutUiState.Success) {
         val profile = state.profile
-        binding.tvAboutQuote.text = profile.quote
+        if (profile.quote.isNullOrBlank()) {
+            binding.tvAboutQuote.visibility = View.GONE
+        } else {
+            binding.tvAboutQuote.text = profile.quote
+            binding.tvAboutQuote.visibility = View.VISIBLE
+        }
         binding.tvAboutName.text = profile.name
         binding.tvAboutTitle.text = profile.title
         binding.tvAboutBio.text = profile.bio
