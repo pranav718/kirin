@@ -10,6 +10,8 @@
 
         <item name="colorSecondary">@color/brand_amber</item>
         <item name="colorOnSecondary">@color/brand_black</item>
+        <item name="colorSecondaryContainer">@color/brand_gold_container</item>
+        <item name="colorOnSecondaryContainer">@color/brand_gold</item>
 
         <item name="android:colorBackground">@color/brand_black</item>
         <item name="colorOnBackground">@color/brand_text_primary</item>

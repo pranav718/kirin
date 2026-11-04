@@ -112,16 +112,20 @@ class AboutFragment : Fragment() {
 
         // Social Platforms
         binding.chipGroupSocials.removeAllViews()
+        val cornerRadius = resources.getDimension(R.dimen.chip_corner_radius)
         profile.socials.forEach { social ->
             val chip = Chip(requireContext()).apply {
                 text = "${social.platform} • ${social.username}"
                 isCheckable = false
                 isClickable = true
+                setEnsureMinTouchTargetSize(false)
                 setChipBackgroundColorResource(R.color.brand_card)
                 setTextColor(ContextCompat.getColor(context, R.color.brand_text_primary))
-                chipStrokeWidth = 1f
-                setChipStrokeColorResource(R.color.brand_border)
-                textSize = 11.5f
+                chipStrokeWidth = 1f * resources.displayMetrics.density
+                setChipStrokeColorResource(R.color.brand_border_accent)
+                shapeAppearanceModel = shapeAppearanceModel.toBuilder().setAllCornerSizes(cornerRadius).build()
+                chipMinHeight = 32f * resources.displayMetrics.density
+                textSize = 12f
                 setOnClickListener {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(social.url)))
                 }
@@ -132,15 +136,19 @@ class AboutFragment : Fragment() {
 
     private fun populateSkillChips(chipGroup: ChipGroup, skills: List<Skill>?) {
         chipGroup.removeAllViews()
+        val cornerRadius = resources.getDimension(R.dimen.chip_corner_radius)
         skills?.forEach { skill ->
             val chip = Chip(requireContext()).apply {
                 text = skill.name
                 isCheckable = false
                 isClickable = false
-                setChipBackgroundColorResource(R.color.brand_surface)
+                setEnsureMinTouchTargetSize(false)
+                setChipBackgroundColorResource(R.color.brand_surface_variant)
                 setTextColor(ContextCompat.getColor(context, R.color.brand_gold))
-                chipStrokeWidth = 1f
+                chipStrokeWidth = 1f * resources.displayMetrics.density
                 setChipStrokeColorResource(R.color.brand_border)
+                shapeAppearanceModel = shapeAppearanceModel.toBuilder().setAllCornerSizes(cornerRadius).build()
+                chipMinHeight = 28f * resources.displayMetrics.density
                 textSize = 11.5f
             }
             chipGroup.addView(chip)

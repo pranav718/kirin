@@ -31,10 +31,19 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
+        var systemBarsBottom = 0
+
         // Setup edge-to-edge insets
-        ViewCompat.setOnApplyWindowInsetsListener(binding.mainCoordinator) { view, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.mainCoordinator) { _, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            view.setPadding(0, systemBars.top, 0, 0)
+            systemBarsBottom = systemBars.bottom
+            binding.appBarLayout.setPadding(0, systemBars.top, 0, 0)
+            binding.bottomNav.setPadding(0, 0, 0, systemBars.bottom)
+            if (binding.bottomNav.visibility == View.GONE) {
+                binding.navHostFragment.setPadding(0, 0, 0, systemBars.bottom)
+            } else {
+                binding.navHostFragment.setPadding(0, 0, 0, 0)
+            }
             insets
         }
 
@@ -57,8 +66,12 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             if (destination.id == R.id.project_detail_dest) {
                 binding.bottomNav.visibility = View.GONE
+                binding.bottomNavDivider.visibility = View.GONE
+                binding.navHostFragment.setPadding(0, 0, 0, systemBarsBottom)
             } else {
                 binding.bottomNav.visibility = View.VISIBLE
+                binding.bottomNavDivider.visibility = View.VISIBLE
+                binding.navHostFragment.setPadding(0, 0, 0, 0)
             }
         }
 
