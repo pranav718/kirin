@@ -39,15 +39,19 @@ class BlogListAdapter(
             binding.tvBlogTitle.text = article.title
 
             binding.chipGroupBlogTags.removeAllViews()
+            val cornerRadius = binding.root.resources.getDimension(R.dimen.chip_corner_radius)
             article.tags.forEach { tag ->
                 val chip = Chip(binding.root.context).apply {
                     text = tag
                     isCheckable = false
                     isClickable = false
-                    setChipBackgroundColorResource(R.color.brand_surface)
+                    setEnsureMinTouchTargetSize(false)
+                    setChipBackgroundColorResource(R.color.brand_surface_variant)
                     setTextColor(ContextCompat.getColor(context, R.color.brand_gold))
-                    chipStrokeWidth = 1f
+                    chipStrokeWidth = 1f * resources.displayMetrics.density
                     setChipStrokeColorResource(R.color.brand_border)
+                    shapeAppearanceModel = shapeAppearanceModel.toBuilder().setAllCornerSizes(cornerRadius).build()
+                    chipMinHeight = 24f * resources.displayMetrics.density
                     textSize = 11f
                 }
                 binding.chipGroupBlogTags.addView(chip)

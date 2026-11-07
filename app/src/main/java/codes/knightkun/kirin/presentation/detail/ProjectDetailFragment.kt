@@ -112,16 +112,20 @@ class ProjectDetailFragment : Fragment() {
 
         // Tech stack chips
         binding.chipGroupTech.removeAllViews()
+        val cornerRadius = resources.getDimension(R.dimen.chip_corner_radius)
         project.techStack.forEach { tech ->
             val chip = Chip(requireContext()).apply {
                 text = tech
                 isCheckable = false
                 isClickable = false
-                setChipBackgroundColorResource(R.color.brand_surface)
+                setEnsureMinTouchTargetSize(false)
+                setChipBackgroundColorResource(R.color.brand_surface_variant)
                 setTextColor(ContextCompat.getColor(context, R.color.brand_gold))
-                chipStrokeWidth = 1f
+                chipStrokeWidth = 1f * resources.displayMetrics.density
                 setChipStrokeColorResource(R.color.brand_border)
-                textSize = 12f
+                shapeAppearanceModel = shapeAppearanceModel.toBuilder().setAllCornerSizes(cornerRadius).build()
+                chipMinHeight = 26f * resources.displayMetrics.density
+                textSize = 11.5f
             }
             binding.chipGroupTech.addView(chip)
         }

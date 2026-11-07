@@ -25,6 +25,7 @@
     <string name="action_view_code">View Code on GitHub</string>
     <string name="action_open_demo">Open Live Demo</string>
     <string name="action_share">Share</string>
+    <string name="action_read_medium">READ ON MEDIUM</string>
 
     <!-- Stats -->
     <string name="stat_projects_count">11</string>

@@ -115,7 +115,9 @@
                 android:id="@+id/chip_group_tech"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                app:chipSpacingHorizontal="6dp"
+                app:chipSpacingVertical="4dp" />
 
             <!-- Action Dock Buttons -->
             <com.google.android.material.button.MaterialButton

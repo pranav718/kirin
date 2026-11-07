@@ -62,7 +62,9 @@
             android:id="@+id/chip_group_blog_tags"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            app:chipSpacingHorizontal="6dp"
+            app:chipSpacingVertical="4dp" />
 
         <!-- Read on Medium Action Link -->
         <LinearLayout
@@ -77,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:letterSpacing="0.08"
-                android:text="READ ON MEDIUM"
+                android:text="@string/action_read_medium"
                 android:textColor="@color/brand_gold"
                 android:textSize="11.5sp"
                 android:textStyle="bold" />
@@ -85,7 +87,7 @@
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:contentDescription="Read Article"
+                android:contentDescription="@string/action_read_medium"
                 android:src="@drawable/ic_open_in_new"
                 app:tint="@color/brand_gold" />
 
