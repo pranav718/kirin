@@ -107,7 +107,11 @@ class ProjectDetailFragment : Fragment() {
         if (!project.image.isNullOrBlank()) {
             binding.ivDetailImage.load(project.image) {
                 crossfade(true)
+                placeholder(R.drawable.ic_image_placeholder)
+                error(R.drawable.ic_broken_image)
             }
+        } else {
+            binding.ivDetailImage.setImageResource(R.drawable.ic_image_placeholder)
         }
 
         // Tech stack chips

@@ -117,6 +117,8 @@ class HomeFragment : Fragment() {
         if (profile.avatarUrl.isNotEmpty()) {
             binding.ivAvatar.load(profile.avatarUrl) {
                 crossfade(true)
+                placeholder(R.drawable.ic_image_placeholder)
+                error(R.drawable.ic_broken_image)
             }
         }
 

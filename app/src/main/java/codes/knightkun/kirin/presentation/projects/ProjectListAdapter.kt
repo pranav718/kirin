@@ -53,7 +53,11 @@ class ProjectListAdapter(
             if (!project.image.isNullOrEmpty()) {
                 binding.ivProjectImage.load(project.image) {
                     crossfade(true)
+                    placeholder(R.drawable.ic_image_placeholder)
+                    error(R.drawable.ic_broken_image)
                 }
+            } else {
+                binding.ivProjectImage.setImageResource(R.drawable.ic_image_placeholder)
             }
 
             binding.root.setOnClickListener {
