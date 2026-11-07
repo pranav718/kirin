@@ -14,4 +14,6 @@ interface PortfolioRepository {
     suspend fun getArticles(): Result<List<Article>>
     suspend fun getSkills(): Result<List<Skill>>
     suspend fun getSkillsByCategory(category: SkillCategory): Result<List<Skill>>
+    suspend fun getProjectsByTech(tech: String): Result<List<Project>> = Result.success(emptyList())
+    suspend fun getArticleById(id: String): Result<Article?> = Result.success(null)
 }

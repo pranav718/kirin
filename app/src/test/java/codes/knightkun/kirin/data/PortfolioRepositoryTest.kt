@@ -123,4 +123,39 @@ class PortfolioRepositoryTest {
         assertEquals(1, langSkills.getOrNull()?.size)
         assertEquals("Go", langSkills.getOrNull()?.first()?.name)
     }
+
+    @Test
+    fun `repository filters projects by technology tag case-insensitively`() = runTest {
+        val dataSource = FakeDataSource(fakeData)
+        val repository = PortfolioRepositoryImpl(dataSource)
+
+        val goProjects = repository.getProjectsByTech("go")
+        assertTrue(goProjects.isSuccess)
+        assertEquals(1, goProjects.getOrNull()?.size)
+        assertEquals("tunneru", goProjects.getOrNull()?.first()?.id)
+
+        val threeJsProjects = repository.getProjectsByTech("Three.js")
+        assertTrue(threeJsProjects.isSuccess)
+        assertEquals(1, threeJsProjects.getOrNull()?.size)
+        assertEquals("nanimo", threeJsProjects.getOrNull()?.first()?.id)
+
+        val nonExistent = repository.getProjectsByTech("Rust")
+        assertTrue(nonExistent.isSuccess)
+        assertTrue(nonExistent.getOrNull()?.isEmpty() == true)
+    }
+
+    @Test
+    fun `repository finds article by ID or returns null when missing`() = runTest {
+        val dataSource = FakeDataSource(fakeData)
+        val repository = PortfolioRepositoryImpl(dataSource)
+
+        val article = repository.getArticleById("convex")
+        assertTrue(article.isSuccess)
+        assertNotNull(article.getOrNull())
+        assertEquals("Convex Guide", article.getOrNull()?.title)
+
+        val missing = repository.getArticleById("non-existent")
+        assertTrue(missing.isSuccess)
+        assertEquals(null, missing.getOrNull())
+    }
 }

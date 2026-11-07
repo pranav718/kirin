@@ -56,4 +56,14 @@ class PortfolioRepositoryImpl(
     override suspend fun getSkillsByCategory(category: SkillCategory): Result<List<Skill>> = runCatching {
         loadData().skills.filter { it.category == category }
     }
+
+    override suspend fun getProjectsByTech(tech: String): Result<List<Project>> = runCatching {
+        loadData().projects.filter { project ->
+            project.techStack.any { it.equals(tech, ignoreCase = true) }
+        }
+    }
+
+    override suspend fun getArticleById(id: String): Result<Article?> = runCatching {
+        loadData().articles.find { it.id.equals(id, ignoreCase = true) }
+    }
 }
