@@ -126,4 +126,24 @@ class ProjectsViewModelTest {
         advanceUntilIdle()
         assertTrue(viewModel.uiState.value is ProjectsUiState.Success)
     }
+
+    @Test
+    fun `viewModel clears search and resets filter to restore full catalog`() = runTest {
+        val repo = FakeRepo(fakeProjects)
+        val viewModel = ProjectsViewModel(repo)
+
+        advanceUntilIdle()
+        viewModel.setFilter(ProjectFilter.LIVE)
+        viewModel.setSearchQuery("non-matching-query")
+
+        val emptyState = viewModel.uiState.value as ProjectsUiState.Success
+        assertEquals(0, emptyState.filteredProjects.size)
+
+        // Reset filters
+        viewModel.setSearchQuery("")
+        viewModel.setFilter(ProjectFilter.ALL)
+
+        val restoredState = viewModel.uiState.value as ProjectsUiState.Success
+        assertEquals(2, restoredState.filteredProjects.size)
+    }
 }

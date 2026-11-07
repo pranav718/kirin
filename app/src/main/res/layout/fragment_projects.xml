@@ -100,16 +100,45 @@
         android:indeterminateTint="@color/brand_gold"
         android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/tv_empty_projects"
+    <!-- Empty Search State Container -->
+    <LinearLayout
+        android:id="@+id/layout_empty_projects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:gravity="center"
-        android:text="@string/search_empty"
-        android:textColor="@color/brand_text_muted"
-        android:textSize="13sp"
-        android:visibility="gone" />
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/search_empty"
+            android:src="@drawable/ic_search"
+            app:tint="@color/brand_border_accent" />
+
+        <TextView
+            android:id="@+id/tv_empty_projects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/search_empty"
+            android:textColor="@color/brand_text_muted"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset_filters"
+            style="@style/Widget.Kirin.Button.Outline"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/action_reset_filters"
+            android:textSize="11.5sp" />
+
+    </LinearLayout>
 
     <!-- Projects List -->
     <androidx.recyclerview.widget.RecyclerView

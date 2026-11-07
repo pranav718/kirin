@@ -72,6 +72,12 @@ class ProjectsFragment : Fragment() {
             }
             viewModel.setFilter(filter)
         }
+
+        binding.btnResetFilters.setOnClickListener {
+            binding.etSearch.text?.clear()
+            binding.chipGroupFilters.check(R.id.chip_all)
+            viewModel.setFilter(ProjectFilter.ALL)
+        }
     }
 
     private fun observeUiState() {
@@ -82,22 +88,29 @@ class ProjectsFragment : Fragment() {
                         is ProjectsUiState.Loading -> {
                             binding.progressProjects.visibility = View.VISIBLE
                             binding.rvProjects.visibility = View.GONE
-                            binding.tvEmptyProjects.visibility = View.GONE
+                            binding.layoutEmptyProjects.visibility = View.GONE
                         }
                         is ProjectsUiState.Error -> {
                             binding.progressProjects.visibility = View.GONE
                             binding.rvProjects.visibility = View.GONE
-                            binding.tvEmptyProjects.visibility = View.VISIBLE
+                            binding.layoutEmptyProjects.visibility = View.VISIBLE
+                            binding.btnResetFilters.visibility = View.GONE
                             binding.tvEmptyProjects.text = state.message
                         }
                         is ProjectsUiState.Success -> {
                             binding.progressProjects.visibility = View.GONE
                             if (state.filteredProjects.isEmpty()) {
                                 binding.rvProjects.visibility = View.GONE
-                                binding.tvEmptyProjects.visibility = View.VISIBLE
+                                binding.layoutEmptyProjects.visibility = View.VISIBLE
+                                binding.btnResetFilters.visibility = View.VISIBLE
+                                binding.tvEmptyProjects.text = if (state.searchQuery.isNotBlank()) {
+                                    getString(R.string.search_no_match, state.searchQuery)
+                                } else {
+                                    getString(R.string.search_empty)
+                                }
                             } else {
                                 binding.rvProjects.visibility = View.VISIBLE
-                                binding.tvEmptyProjects.visibility = View.GONE
+                                binding.layoutEmptyProjects.visibility = View.GONE
                                 projectAdapter.submitList(state.filteredProjects)
                             }
                         }
